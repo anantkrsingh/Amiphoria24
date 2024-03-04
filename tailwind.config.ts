@@ -1,3 +1,4 @@
+
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -15,9 +16,7 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
-      backgroundImage: {
-        'home': "url('./../../public/bg.jpg')"
-      }
+      
     },
   },
   plugins: [addVariablesForColors],

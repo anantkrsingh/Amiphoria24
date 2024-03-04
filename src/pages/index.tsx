@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+import bgImage from '../assets/bg.jpg'
+import { MyNav } from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 const words =
@@ -8,9 +10,14 @@ const words =
 export default function Home() {
   return (
     <main
-      className={`bg-home w-screen h-screen bg-white m-0 p-0`}
+      className={` bg-[url('../../public/bg.jpg')] bg-cover h-screen m-0 p-0`}
     >
-      <TextGenerateEffect words={words} />
+        <MyNav />
+      <div className="relative top-20">
+
+
+        <TextGenerateEffect words={words} />
+      </div>
     </main>
   );
 }
